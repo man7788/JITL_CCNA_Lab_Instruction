@@ -5,7 +5,8 @@
 ### Copper Straight-Through
 
 1. PCs -> Switches
-2. Switches -> Routers
+2. Servers -> Switches
+3. Switches -> Routers
 
 ### Copper Cross-Over
 
