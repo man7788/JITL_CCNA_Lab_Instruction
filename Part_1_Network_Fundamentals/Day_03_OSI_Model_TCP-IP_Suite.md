@@ -1,8 +1,8 @@
 # Day 03 Lab - OSI Model, TCP-IP Suite
 
-## PC Command Prompt
+## Step 2
 
-### Internet Protocol Configuration
+### PC Command Prompt
 
 Display all current TCP/IP network configuration values
 
