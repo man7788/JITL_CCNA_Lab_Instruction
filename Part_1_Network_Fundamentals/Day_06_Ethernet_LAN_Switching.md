@@ -29,7 +29,7 @@ ping 192.168.1.4
 
 ## Step 4
 
-### View the switch's MAC address table
+View the switch's MAC address table
 
 ```
 #show mac address-table
@@ -37,7 +37,7 @@ ping 192.168.1.4
 
 ## Step 5
 
-### Remove all dynamic MAC addresses
+Remove all dynamic MAC addresses
 
 ```
 #clear mac address-table dynamic
