@@ -70,7 +70,7 @@ Specify the port's native VLAN
 
 ### R1
 
-Enablethe interface
+Enable the interface
 
 ```
 (config-if)#no shutdown
