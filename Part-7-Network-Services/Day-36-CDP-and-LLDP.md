@@ -4,9 +4,13 @@
 
 Display all current TCP/IP network configuration values
 
+## PC
+
 ```
 ipconfig
 ```
+
+##
 
 View information about CDP neighbors
 
