@@ -45,13 +45,13 @@ View a concise summary of interface IP addresses and status
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 Configure a directly connected static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <exit-interface>
+(config)#ip route <destination-network> <netmask> <exit-interface>
 ```
 
 View the routing table

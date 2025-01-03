@@ -23,7 +23,7 @@ View detailed Layer 3 information about interfaces
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 View the routing table

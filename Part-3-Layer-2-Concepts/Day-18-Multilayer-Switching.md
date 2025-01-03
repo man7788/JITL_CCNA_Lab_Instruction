@@ -69,7 +69,7 @@ Enable IP routing on a multilayer switch
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 ## Step 2

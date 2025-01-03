@@ -137,7 +137,7 @@ View the routing table
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 ### PC1's Command Prompt

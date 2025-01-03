@@ -57,7 +57,7 @@ Disable a recursive static route
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 ## Router 2
@@ -77,7 +77,7 @@ View the routing table
 Configure a directly connected static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <exit-interface>
+(config)#ip route <destination-network> <netmask> <exit-interface>
 ```
 
 Show running-config, limit output to ip route
@@ -89,7 +89,7 @@ Show running-config, limit output to ip route
 Disable a directly connected static route
 
 ```
-(config-if)#no ip route <destination-network> <netmask> <exit-interface>
+(config)#no ip route <destination-network> <netmask> <exit-interface>
 ```
 
 ## Router 3

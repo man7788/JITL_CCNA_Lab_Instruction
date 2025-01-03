@@ -5,7 +5,7 @@
 Configure a recursive static route
 
 ```
-(config-if)#ip route <destination-network> <netmask> <next-hop>
+(config)#ip route <destination-network> <netmask> <next-hop>
 ```
 
 Send Internet Control Message Protocol (ICMP) echo Request messages
