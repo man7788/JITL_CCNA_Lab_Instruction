@@ -4,20 +4,21 @@
 
 ### Copper Straight-Through
 
-1. PCs -> Switches
-2. Servers -> Switches
-3. Switches -> Routers
+- PCs -> Switches
+- Servers -> Switches
+- Switches -> Routers
 
 ### Copper Cross-Over
 
-1. Switches -> Switches
-2. Routers -> Routers
+Distance less than 100 meters.
 
-> If the distance is less than 100 meters
+- Switches -> Switches
+- Routers -> Routers
+
+> Make redundant connections between switches connecting to the routers.
 
 ### Fiber
 
-1. Switches -> Routers
-2. Router -> Routers
+Distance more than 100 meters.
 
-> If the distance is less more than 100 meters
+- Routers -> Routers
