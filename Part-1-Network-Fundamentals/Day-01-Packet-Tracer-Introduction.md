@@ -4,45 +4,57 @@
 
 ### New York Branch
 
-```
-- PC x 2 -> Switch -> Router -> Firewall -> Internet
-```
+- PC1 & PC2 -> SW1 -> R1 -> FW1 -> The Internet
+
 
 ### Tokyo Branch
 
-```
-- Server x 2 -> Switch -> Firewall -> Router -> Internet
-```
+
+- SRV1 & SRV2 -> SW2 -> FW2 -> R2 -> The Internet
+
 
 ### Attacker
 
-```
-- Laptop -> Internet
-```
 
-## Placing Devices & Connections
+- ATTACKER -> The Internet
 
+
+## Placing Devices and Connections
 ### Routers
 
-- Select [Network Devices] - [Routers] - [2911]
+- [Network Devices] - [Routers] - [2911]
+
 
 ### Switches
 
-- Select [Network Devices] - [Switches] - [2960 ISO15]
+- [Network Devices] - [Switches] - [2960 ISO15]
+
 
 ### Firewalls
 
-- Select [Network Devices] - [Security] - [5505]
+- [Network Devices] - [Security] - [5505]
+
 
 ### End Devices
 
-1. Select [End Devices] - [End Devices] - [PC-PT]
-2. Select [End Devices] - [End Devices] - [Server-PT]
 
-### The Attackter
+- [End Devices] - [End Devices] - [PC-PT]
+- [End Devices] - [End Devices] - [Server-PT]
 
-- Select [Network Devices] - [Security] - [Laptop-PT]
+### Attackter
+
+
+- [Network Devices] - [Security] - [Laptop-PT]
+
 
 ### Connections
 
-- Select [Connections] - [Automatically Choose Connection Type]
+
+- [Connections] - [Automatically Choose Connection Type]
+
+
+## Renaming the Devices
+
+### Renaming the Devices
+
+- Click on each device's name to rename it.
