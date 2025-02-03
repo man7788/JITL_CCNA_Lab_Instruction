@@ -1,45 +1,58 @@
-# Day 15 Lab - VLSM
+# Day 15 Lab - Subnetting (VLSM)
 
-### Router
+## Router
 
-Set the interfaces's IP address/netmask
-
-```
-(config-if)#ip address <ip-address> <netmask>
-```
-
-Enable the interface
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#no shutdown
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View detailed Layer 3 information about interfaces
+Enable the interface.
 
 ```
-#show ip interfaces [interface]
+(config-if)# no shutdown
 ```
 
-Configure a recursive static route
+View detailed Layer 3 information about interfaces.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+# show ip interfaces [interface]
 ```
 
-View the routing table
+Configure a recursive static route.
 
 ```
-#show ip route
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
-### PC
-
-- Config all PC's Default Gateway
-
-Send Internet Control Message Protocol (ICMP) echo Request messages
+View the routing table.
 
 ```
-ping 192.168.5.xxx
+# show ip route
+```
+
+## PC
+
+### PC's Config GUI > GLOBAL > Settings
+
+#### Gateway/DNS IPv4 > Static
+
+- Configure Default Gateway.
+
+### PC's Config GUI > INTERFACE > FastEthernet0
+
+#### IP Configuration > Static
+
+- Configure IP Address.
+
+- Configure Subnet Mask.
+
+### PC's Command Prompt
+Send Internet Control Message Protocol (ICMP) echo Request messages.
+
+```
+> ping <targetname>
 ```
 
 ## LAN 2
