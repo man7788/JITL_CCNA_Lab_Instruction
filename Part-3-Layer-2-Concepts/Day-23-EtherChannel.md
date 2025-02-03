@@ -2,163 +2,163 @@
 
 ## Step 1
 
-View STP status and information
+View STP status and information.
 
 ```
-#show spanning-tree
+# show spanning-tree
 ```
 
-Configure an LACP EtherChannel
+Configure an LACP EtherChannel.
 
 ```
-(config-if)#channel-group <group> mode {active | passive}
+(config-if)# channel-group <group> mode {active | passive}
 ```
 
-Configure the port-channel interface
+Configure the port-channel interface.
 
 ```
-(config)#interface port-channel <number>
+(config)# interface port-channel <number>
 ```
 
-Manually configure trunk mode
+Manually configure trunk mode.
 
 ```
-(config-if)#switchport mode trunk
+(config-if)# switchport mode trunk
 ```
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
-View EtherChannel status
+View EtherChannel status.
 
 ```
-#show ehterchannel summary
+# show ehterchannel summary
 ```
 
-Set the port's trunk encapsulation protocol
+Set the port's trunk encapsulation protocol.
 
 ```
-(config-if)#switchport trunk encapsulation dot1q
+(config-if)# switchport trunk encapsulation dot1q
 ```
 
-View a list of trunk ports
+View a list of trunk ports.
 
 ```
-show interfaces trunk
+# show interfaces trunk
 ```
 
 ## Step 2
 
-Configure a PaGP EtherChannel
+Configure a PaGP EtherChannel.
 
 ```
-(config-if)#channel-group <group> mode {desirable | auto}
+(config-if)# channel-group <group> mode {desirable | auto}
 ```
 
-Configure the port-channel interface
+Configure the port-channel interface.
 
 ```
-(config)#interface port-channel <number>
+(config)# interface port-channel <number>
 ```
 
-Manually configure trunk mode
+Manually configure trunk mode.
 
 ```
-(config-if)#switchport mode trunk
+(config-if)# switchport mode trunk
 ```
 
-Set the port's trunk encapsulation protocol
+Set the port's trunk encapsulation protocol.
 
 ```
-(config-if)#switchport trunk encapsulation dot1q
+(config-if)# switchport trunk encapsulation dot1q
 ```
 
-View EtherChannel status
+View EtherChannel status.
 
 ```
-#show ehterchannel summary
+# show ehterchannel summary
 ```
 
 ## Step 3
 
-Make the port a Layer 3 routed port
+Make the port a Layer 3 routed port.
 
 ```
-(config-if)#no switchport
+(config-if)# no switchport
 ```
 
-Configure a static EtherChannel
+Configure a static EtherChannel.
 
 ```
-(config-if)#channel-group <group> mode on
+(config-if)# channel-group <group> mode on
 ```
 
-Configure the port-channel interface
+Configure the port-channel interface.
 
 ```
-(config)#interface port-channel <number>
+(config)# interface port-channel <number>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View EtherChannel status
+View EtherChannel status.
 
 ```
-#show ehterchannel summary
+# show ehterchannel summary
 ```
 
-To determine the network connectivity to another network device
+To determine the network connectivity to another network device.
 
 ```
-#ping <dest-address>
+# ping <dest-address>
 ```
 
 ## Step 4
 
-Enable IP routing on a multilayer switch
+View the routing table.
 
 ```
-(config)#ip routing
+# show ip route
 ```
 
-View the routing table
+Enable IP routing on a multilayer switch.
 
 ```
-#show ip route
+(config)# ip routing
 ```
 
-Configure a recursive static route
+Configure a recursive static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
 ### PC1's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 172.16.2.1
+> ping <targetname>
 ```
 
 ## Step 5
 
-View the load-balancing parameters
+View the load-balancing parameters.
 
 ```
-#show etherchannel load-balance
+# show etherchannel load-balance
 ```
 
 ## Step 6
 
-Modify the EtherChannel load-balancing parameters
+Modify the EtherChannel load-balancing parameters.
 
 ```
 (config)# port-channel load-balance <parameters>
