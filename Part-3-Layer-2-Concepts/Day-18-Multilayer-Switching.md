@@ -4,116 +4,116 @@
 
 ### R1
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-Delete a subinterface (ROAS)
+Delete a subinterface (ROAS).
 
 ```
-(config)#no interface <interface.subif-number>
+(config)# no interface <interface.subif-number>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
 ### SW2
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
-Set the interface to default configuration
+Set the interface to default configuration.
 
 ```
-(config)#default interface <interface>
+(config)# default interface <interface>
 ```
 
-Make the port a Layer 3 routed port
+Make the port a Layer 3 routed port.
 
 ```
-(config-if)#no switchport
+(config-if)# no switchport
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
-Enable IP routing on a multilayer switch
+Enable IP routing on a multilayer switch.
 
 ```
-(config)#ip routing
+(config)# ip routing
 ```
 
-Configure a recursive static route
+Configure a recursive static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
 ## Step 2
 
-View a list of VLANs and associated ports
+View a list of VLANs and associated ports.
 
 ```
-#show vlan brief
+# show vlan brief
 ```
 
-Configure a switch virtual interface (SVI)
+Configure a switch virtual interface (SVI).
 
 ```
-(config)#interface vlan <vlan-id>
+(config)# interface vlan <vlan-id>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
 ## Step 3
 
-### Command Prompt
+### PC's Command Prompt
 
 Send Internet Control Message Protocol (ICMP) echo Request messages
 
 ```
-ping 10.0.0.xxx
+> ping <targetname>
 ```
 
 ## Step 4
 
-### Command Prompt
+### PC's Command Prompt
 
 Send Internet Control Message Protocol (ICMP) echo Request messages
 
 ```
-ping 1.1.1.1
+> ping <targetname>
 ```
