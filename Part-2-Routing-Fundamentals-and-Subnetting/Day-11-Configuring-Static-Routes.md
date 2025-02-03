@@ -2,62 +2,70 @@
 
 ## Step 1
 
-### PC
+### PC's Config GUI > GLOBAL > Settings
 
-1. Config all PC's Default Gateway
-2. Config all PC's Interface IP Address
-3. Config all PC's Interface Subnet Mask
+#### Gateway/DNS IPv4 > Static
 
-### Router
+- Configure Default Gateway.
 
-Set the device's hostname
+### PC's Config GUI > INTERFACE > FastEthernet0
 
-```
-(config)#hostname <hostname>
-```
+#### IP Configuration > Static
 
-Set the interfaces's IP address/netmask
+- Configure IP Address.
 
-```
-(config-if)#ip address <ip-address> <netmask>
-```
+- Configure Subnet Mask.
 
-Set the interfaces's description
+##
+
+Set the device's hostname.
 
 ```
-(config-if)#description <description>
+(config)# hostname <hostname>
 ```
 
-Enable/disable the interface
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#[no] shutdown
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View a concise summary of interface IP addresses and status
+Set the interfaces's description.
 
 ```
-#show ip interface brief
+(config-if)# description <description>
+```
+
+Enable/disable the interface.
+
+```
+(config-if)# [no] shutdown
+```
+
+View a concise summary of interface IP addresses and status.
+
+```
+# show ip interface brief
 ```
 
 ## Step 2
 
-Configure a recursive static route
+Configure a recursive static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
-Configure a directly connected static route
+Configure a directly connected static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <exit-interface>
+(config)# ip route <destination-network> <netmask> <exit-interface>
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
 ### PC1's Command Prompt
@@ -65,5 +73,5 @@ View the routing table
 Send Internet Control Message Protocol (ICMP) echo Request messages
 
 ```
-ping 192.168.3.1
+> ping <targetname>
 ```
