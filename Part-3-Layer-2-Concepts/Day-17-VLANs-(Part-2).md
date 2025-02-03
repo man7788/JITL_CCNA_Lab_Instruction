@@ -2,104 +2,104 @@
 
 ## Step 1
 
-Manually configure access mode
+Manually configure access mode.
 
 ```
-(config-if)#switchport mode access
+(config-if)# switchport mode access
 ```
 
-Set the port's access VLAN
+Set the port's access VLAN.
 
 ```
-(config-if)#switchport access vlan <vlan-id>
+(config-if)# switchport access vlan <vlan-id>
 ```
 
 ## Step 2
 
-Manually configure trunk mode
+Manually configure trunk mode.
 
 ```
-(config-if)#switchport mode trunk
+(config-if)# switchport mode trunk
 ```
 
-Specify the port's list of allowed VLANs
+Specify the port's list of allowed VLANs.
 
 ```
-(config-if)#switchposrt trunk allowed vlan <vlans>
+(config-if)# switchposrt trunk allowed vlan <vlans>
 ```
 
-Specify the port's native VLAN
+Specify the port's native VLAN.
 
 ```
-(config-if)#switchposrt trunk native vlan <vlan-id>
+(config-if)# switchposrt trunk native vlan <vlan-id>
 ```
 
-View a list of VLANs and associated ports
+View a list of VLANs and associated ports.
 
 ```
-#show vlan brief
+# show vlan brief
 ```
 
-Configure a VLAN
+Configure a VLAN.
 
 ```
-(config)#vlan <vlan-id>
+(config)# vlan <vlan-id>
 ```
 
 ## Step 3
 
 ### SW2
 
-Manually configure trunk mode
+Manually configure trunk mode.
 
 ```
-(config-if)#switchport mode trunk
+(config-if)# switchport mode trunk
 ```
 
-Specify the port's list of allowed VLANs
+Specify the port's list of allowed VLANs.
 
 ```
-(config-if)#switchposrt trunk allowed vlan <vlans>
+(config-if)# switchposrt trunk allowed vlan <vlans>
 ```
 
-Specify the port's native VLAN
+Specify the port's native VLAN.
 
 ```
-(config-if)#switchposrt trunk native vlan <vlan-id>
+(config-if)# switchposrt trunk native vlan <vlan-id>
 ```
 
 ### R1
 
-Enable the interface
+Enable the interface.
 
 ```
-(config-if)#no shutdown
+(config-if)# no shutdown
 ```
 
-Configure a subinterface (ROAS)
+Configure a subinterface (ROAS).
 
 ```
-(config-if)#interface <interface.subif-number>
+(config-if)# interface <interface.subif-number>
 ```
 
-Specify the subinterface's VLAN ID
+Specify the subinterface's VLAN ID.
 
 ```
-(config-subif)#encapsulation dot1q <vlan>
+(config-subif)# encapsulation dot1q <vlan>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-subif)#ip address <ip-address> <netmask>
+(config-subif)# ip address <ip-address> <netmask>
 ```
 
 ## Step 4
 
-### Command Prompt
+### PC's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.0.xxx
+> ping <targetname>
 ```
