@@ -2,76 +2,84 @@
 
 ## Step 1
 
-### PC
+### PC's Config GUI > GLOBAL > Settings
 
-1. Config all PC's Default Gateway
-2. Config all PC's Interface IP Address
-3. Config all PC's Interface Subnet Mask
+#### Gateway/DNS IPv4 > Static
+
+- Configure Default Gateway.
+
+### PC's Config GUI > INTERFACE > FastEthernet0
+
+#### IP Configuration > Static
+
+- Configure IP Address.
+
+- Configure Subnet Mask.
+
 
 ## Step 2
 
-### Copper Straight-Through
+Make 3 Copper Straight-Through cable connections.
 
-1. SW1 -> R1
+- SW1 -> R1
 
-### Router
-
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-Enablethe interface
+Enable the interface.
 
 ```
-(config-if)#no shutdown
+(config-if)# no shutdown
 ```
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
 ## Step 3
 
-Manually configure access mode
+Manually configure access mode.
 
 ```
-(config-if)#switchport mode access
+(config-if)# switchport mode access
 ```
 
-Set the port's access VLAN
+Set the port's access VLAN.
 
 ```
-(config-if)#switchport access vlan <vlan-id>
+(config-if)# switchport access vlan <vlan-id>
 ```
 
-View a list of VLANs and associated ports
+View a list of VLANs and associated ports.
 
 ```
-#show vlan brief
+# show vlan brief
 ```
 
-Configure a VLAN
+Configure a VLAN.
 
 ```
-(config)#vlan <vlan-id>
+(config)# vlan <vlan-id>
 ```
 
-Name the VLAN
+Name the VLAN.
 
 ```
-(config-vlan)#name <name>
+(config-vlan)# name <name>
 ```
 
 ## Step 4
 
-### Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+### PC's Command Prompt
+
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.0.xxx
+> ping <targetname>
 ```
