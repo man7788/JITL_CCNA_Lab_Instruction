@@ -2,100 +2,100 @@
 
 ## Step 1
 
-Show interface switchport information
+Show interface switchport information.
 
 ```
-#show interfaces <interface-id> switchport
+# show interfaces <interface-id> switchport
 ```
 
-Manually configure trunk mode
+Manually configure trunk mode.
 
 ```
-(config-if)#switchport mode trunk
+(config-if)# switchport mode trunk
 ```
 
-Disable DTP on the port
+Disable DTP on the port.
 
 ```
-(config-if)#switchport nonegotiate
+(config-if)# switchport nonegotiate
 ```
 
 ## Step 2
 
-View VTP information
+View VTP information.
 
 ```
-#show vtp status
+# show vtp status
 ```
 
-Set the VTP domain name
+Set the VTP domain name.
 
 ```
-(config)#vtp domain <name>
+(config)# vtp domain <name>
 ```
 
-Configure a VLAN
+Configure a VLAN.
 
 ```
-(config)#vlan <vlan-id>
+(config)# vlan <vlan-id>
 ```
 
-View a list of VLANs and associated ports
+View a list of VLANs and associated ports.
 
 ```
-#show vlan brief
+# show vlan brief
 ```
 
 ## Step 3
 
-Set the VTP mode
+Set the VTP mode.
 
 ```
-(config)#vtp mode transparent
+(config)# vtp mode transparent
 ```
 
-Configure a VLAN
+Configure a VLAN.
 
 ```
-(config)#vlan <vlan-id>
+(config)# vlan <vlan-id>
 ```
 
-View VTP information
+View VTP information.
 
 ```
-#show vtp status
+# show vtp status
 ```
 
 ## Step 4
 
-Set the VTP mode
+Set the VTP mode.
 
 ```
-(config)#vtp mode client
+(config)# vtp mode client
 ```
 
-Configure a VLAN
+Configure a VLAN.
 
 ```
-(config)#vlan <vlan-id>
+(config)# vlan <vlan-id>
 ```
 
 ## Step 5
 
-Show interface switchport information
+Show interface switchport information.
 
 ```
-#show interfaces <interface-id> switchport
+# show interfaces <interface-id> switchport
 ```
 
-Set the VTP mode
+Set the VTP mode.
 
 ```
-(config)#vtp mode access
+(config)# vtp mode access
 ```
 
-Set the port's access VLAN
+Set the port's access VLAN.
 
 ```
-(config-if)#switchport access vlan <vlan-id>
+(config-if)# switchport access vlan <vlan-id>
 ```
