@@ -2,7 +2,7 @@
 
 ## Which switch is the root bridge?
 
-SW3 - Lowest Bridge Priority
+- SW3 - Lowest Bridge Priority
 
 ## Identify the role of each switch port
 
@@ -34,8 +34,20 @@ SW3 - Lowest Bridge Priority
 
 ## Confirm your answers in the CLI
 
-View STP status and information
+View STP status and information.
 
 ```
-#show spanning-tree
+# show spanning-tree
+```
+
+View detail STP status and information.
+
+```
+# show spanning-tree detail
+```
+
+View the spanning-tree summary.
+
+```
+# show spanning-tree summary
 ```
