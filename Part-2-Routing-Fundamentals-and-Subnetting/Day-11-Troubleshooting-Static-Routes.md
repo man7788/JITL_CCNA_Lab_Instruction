@@ -1,127 +1,111 @@
 # Day 11 Lab - Troubleshooting Static Routes
 
-## PC1 Command Prompt
+## PC1's Command Prompt
 
-### Command Prompt
-
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 192.168.3.1
+> ping <targetname>
 ```
 
-Display all current TCP/IP network configuration values
+Display all current TCP/IP network configuration values.
 
 ```
-ipconfig
+> ipconfig
 ```
 
-Displays the full TCP/IP configuration for all adapters
+Displays the full TCP/IP configuration for all adapters.
 
 ```
-ipconfig /all
-```
-
-Send Internet Control Message Protocol (ICMP) echo Request messages
-
-```
-ping 192.168.1.254
+> ipconfig /all
 ```
 
 ## Router 1
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
-Show running-config, limit output to ip route
+View the running-config, limit output to ip route.
 
 ```
-#show running-config | include ip route
+# show running-config | include ip route
 ```
 
-Disable a recursive static route
+Delete a recursive static route.
 
 ```
-(config-if)#no ip route <destination-network> <netmask> <next-hop>
+(config-if)# no ip route <destination-network> <netmask> <next-hop>
 ```
 
-Configure a recursive static route
+Configure a recursive static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
 ## Router 2
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
-Configure a directly connected static route
+Configure a directly connected static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <exit-interface>
+(config)# ip route <destination-network> <netmask> <exit-interface>
 ```
 
-Show running-config, limit output to ip route
+View the running-config, limit output to ip route.
 
 ```
-#show running-config | include ip route
+# show running-config | include ip route
 ```
 
-Disable a directly connected static route
+Delete a directly connected static route.
 
 ```
-(config)#no ip route <destination-network> <netmask> <exit-interface>
+(config)# no ip route <destination-network> <netmask> <exit-interface>
 ```
 
 ## Router 3
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
-```
-
-### PC1's Command Prompt
-
-Send Internet Control Message Protocol (ICMP) echo Request messages
-
-```
-ping 192.168.3.1
+# show ip route
 ```
