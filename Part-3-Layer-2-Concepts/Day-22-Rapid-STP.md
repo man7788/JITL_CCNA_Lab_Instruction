@@ -2,10 +2,10 @@
 
 ## Step 1
 
-View STP status and information
+View STP status and information.
 
 ```
-#show spanning-tree
+# show spanning-tree
 ```
 
 Which switch is the root bridge?
@@ -14,7 +14,7 @@ Which switch is the root bridge?
 
 What appears different than what you have learned about the root bridge?
 
-- There is a backup port in the root bridge
+- There is a backup port in the root bridge.
 
 What is the cause of this?
 
@@ -46,28 +46,36 @@ What is the cause of this?
 - F0/2: Alternate
 - F0/24: Designated
 
-> All ports connecting to the end hosts are all designated ports
+> All ports connecting to the end hosts are all designated ports.
 
-View STP status and information
+View STP status and information.
 
 ```
-#show spanning-tree
+# show spanning-tree
 ```
 
 ## Step 3
 
-Set the port's RSTP link type
+View STP status and information.
 
 ```
-spanning-tree link-type {point-to-point | shared}
+# show spanning-tree
 ```
 
-Enable Portfast on the port
+Set the port's RSTP link type.
 
 ```
-(config-if)#spanning-tree portfast
+(config-if)# spanning-tree link-type {point-to-point | shared}
 ```
 
-> Edge ports connecting to the end hosts are also point-to-point links, if they are operating at full-duplex mode
 
-> Edge ports connecting to a hub are also shared links, the hub doesn't exist in terms of spanning-tree
+
+Enable Portfast on the port.
+
+```
+(config-if)# spanning-tree portfast
+```
+
+> Edge ports connecting to the end hosts are also point-to-point links, if they are operating at full-duplex mode.
+
+> Edge ports connecting to a hub are also shared links, the hub doesn't exist in terms of spanning-tree.
