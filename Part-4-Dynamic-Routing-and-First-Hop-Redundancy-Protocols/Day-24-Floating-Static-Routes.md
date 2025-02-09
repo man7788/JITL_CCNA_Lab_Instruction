@@ -2,10 +2,10 @@
 
 ## Step 1
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
 Which dynamic routing protocol is Enterprise A using?
@@ -14,72 +14,64 @@ Which dynamic routing protocol is Enterprise A using?
 
 Which route will be used if PC1 tries to access SRV1?
 
-- The OSPF route
+- The OSPF route.
 
 Which route will be used if PC1 tries to access remote server 1.1.1.1 over the Internet?
 
-- The default route
+- The default route.
 
 ### PC1's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.2.1
+> ping <targetname>
 ```
 
-```
-ping 1.1.1.1
-```
-
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
 ## Step 2
 
-Configure a floating static route
+Configure a floating static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop> <administrative-distance>
+(config)# ip route <destination-network> <netmask> <next-hop> <administrative-distance>
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
 ## Step 3
 
-Disable the interface
+Disable the interface.
 
 ```
-(config-if)#shutdown
+(config-if)# shutdown
 ```
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
 ### PC1's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.2.1
-```
-
-```
-ping 1.1.1.1
+> ping <targetname>
 ```
 
 Trace the path that an Internet Protocol (IP) packet takes to its destination.
 
 ```
-tracert 10.0.2.1
+> tracert <targetname>
 ```
