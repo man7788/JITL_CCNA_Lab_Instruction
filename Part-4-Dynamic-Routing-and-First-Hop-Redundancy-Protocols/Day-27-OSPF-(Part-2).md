@@ -2,86 +2,86 @@
 
 ## Step 3
 
-Activate OSPF on the interface
+Activate OSPF on the interface.
 
 ```
-(config-if)#ip ospf <process-id> area <area>
+(config-if)# ip ospf <process-id> area <area>
 ```
 
-View information about router's active routing protocols
+View information about router's active routing protocols.
 
 ```
-#show ip protocols
+# show ip protocols
 ```
 
-Create/configure an OSPF process
+Create/configure an OSPF process.
 
 ```
-(config)#router ospf <process-id>
+(config)# router ospf <process-id>
 ```
 
-Configure a passive interface
+Configure a passive interface.
 
 ```
-(config-router)#passive-interface <interface>
+(config-router)# passive-interface <interface>
 ```
 
-Make all interfaces passive by default
+Make all interfaces passive by default.
 
 ```
-(config-router)#passive-interface default
+(config-router)# passive-interface default
 ```
 
-Disable a passive interface
+Disable a passive interface.
 
 ```
-(config-router)#no passive-interface <interface>
+(config-router)# no passive-interface <interface>
 ```
 
-View OSPF neighbors and their status
+View OSPF neighbors and their status.
 
 ```
-#show ip ospf neighbor
+# show ip ospf neighbor
 ```
 
 ## Step 4
 
-Modify the OSPF cost reference bandwidth
+Modify the OSPF cost reference bandwidth.
 
 ```
-(config-router)#auto-cost reference-bandwidth <mbps>
+(config-router)# auto-cost reference-bandwidth <mbps>
 ```
 
-View information about all OSPF interfaces
+View information about all OSPF interfaces.
 
 ```
-#show ip ospf interface
+# show ip ospf interface
 ```
 
 ## Step 5
 
-Advertise a default route to other routers
+Advertise a default route to other routers.
 
 ```
-(config-router)#default-information originate
+(config-router)# default-information originate
 ```
 
-Configure a default route
+Set the interfaces's IP address/netmask.
 
 ```
-(config)# ip route 0.0.0.0 0.0.0.0 <next-hop>
+(config-if)#ip address <ip-address> <netmask>
 ```
 
 ## Step 6
 
-View the routing table
+View the routing table.
 
 ```
-#show ip route
+# show ip route
 ```
 
-Disable the interface
+Disable the interface.
 
 ```
-(config-if)#shutdown
+(config-if)# shutdown
 ```
