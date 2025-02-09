@@ -2,19 +2,19 @@
 
 ## Step 2
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-Create/configure a loopback interface
+Create/configure a loopback interface.
 
 ```
-interface loopback <number>
+(config)# interface loopback <number>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
 (config-if)#ip address <ip-address> <netmask>
@@ -22,72 +22,72 @@ Set the interfaces's IP address/netmask
 
 ## Step 3
 
-Create/configure an EIGRP process
+Create/configure an EIGRP process.
 
 ```
-(config)#router eigrp <as-number>
+(config)# router eigrp <as-number>
 ```
 
-Activate EIGRP on all interfaces
+Activate EIGRP on all interfaces.
 
 ```
-(config-router)#network 0.0.0.0 255.255.255.255
+(config-router)# network 0.0.0.0 255.255.255.255
 ```
 
-> Not recommended on real networks
+> Not recommended on real networks.
 
-View information about router's active routing protocols
-
-```
-#show ip protocols
-```
-
-Disable automatic network summarization
+View information about router's active routing protocols.
 
 ```
-(config-router)#no auto-summary
+# show ip protocols
 ```
 
-Configure a passive interface
+Disable automatic network summarization.
 
 ```
-(config-router)#passive-interface <interface>
+(config-router)# no auto-summary
 ```
 
-Activate EIGRP on interfaces with an IP address in the specified range
+Configure a passive interface.
 
 ```
-(config-router)#network <ip-address> <wildcard-mask>
+(config-router)# passive-interface <interface>
 ```
 
-View EIGRP neighbors and their status
+Activate EIGRP on interfaces with an IP address in the specified range.
 
 ```
-#show ip eigrp neighbor
+(config-router)# network <ip-address> <wildcard-mask>
 ```
 
-View the routing table
+View EIGRP neighbors and their status.
 
 ```
-#show ip route [protocol]
+# show ip eigrp neighbors
 ```
 
-To display Enhanced Interior Gateway Routing Protocol (EIGRP) topology table entries
+View the routing table.
 
 ```
-#show ip eigrp topology
+# show ip route [protocol]
+```
+
+To display Enhanced Interior Gateway Routing Protocol (EIGRP) topology table entries.
+
+```
+# show ip eigrp topology
 ```
 
 ## Step 4
 
-View information about router's active routing protocols
+View information about router's active routing protocols.
 
 ```
-#show ip protocols
+# show ip protocols
 ```
 
-Instructs the router to include routes with a metric less than or equal to n times the minimum metric route for that destination, where n is the number specified by the variance command
+Instructs the router to include routes with a metric less than or equal to n times the minimum metric route for that destination, where n is the number specified by the variance command.
 
 ```
-(config-router)#variance <n>
+(config-router)# variance <n>
 ```
