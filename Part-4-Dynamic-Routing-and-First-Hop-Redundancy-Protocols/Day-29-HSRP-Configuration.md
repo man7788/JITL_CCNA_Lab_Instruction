@@ -2,128 +2,128 @@
 
 ## Step 1
 
-### PC Command Prompt
+### PC's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
-
-```
-ping 8.8.8.8
-```
-
-Display all current TCP/IP network configuration values
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ipconfig
+> ping <targetname>
+```
+
+Display all current TCP/IP network configuration values.
+
+```
+> ipconfig
 ```
 
 Trace the path that an Internet Protocol (IP) packet takes to its destination.
 
 ```
-tracert 8.8.8.8
+> tracert <targetname>
 ```
 
 ## Step 2
 
-Enable HSRP version 2
+Enable HSRP version 2.
 
 ```
-(config-if)#standby version 2
+(config-if)# standby version 2
 ```
 
-Set the HSRP virtual IP address
+Set the HSRP virtual IP address.
 
 ```
-(config-if)#standby <group> ip <virtual-ip>
+(config-if)# standby <group> ip <virtual-ip>
 ```
 
-Set the HSRP virtual IP priority
+Set the HSRP virtual IP priority.
 
 ```
-(config-if)#standby <group> priority <priority>
+(config-if)# standby <group> priority <priority>
 ```
 
-Enable HSRP preemption
+Enable HSRP preemption.
 
 ```
-(config-if)#standby <group> preempt
+(config-if)# standby <group> preempt
 ```
 
-View HSRP status and information
+View HSRP status and information.
 
 ```
-#show standby
+# show standby
 ```
 
 ## Step 3
 
-### PC
+### PC's Config GUI > GLOBAL > Settings
 
-1. Config all PC's Default Gateway
+#### Gateway/DNS IPv4 > Static
 
-### PC Command Prompt
+- Configure Default Gateway.
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+### PC's Command Prompt
 
-```
-ping 8.8.8.8
-```
-
-Displays current arp cache tables for all interfaces
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-arp -a
+> ping <targetname>
+```
+
+Displays current arp cache tables for all interfaces.
+
+```
+> arp -a
 ```
 
 Trace the path that an Internet Protocol (IP) packet takes to its destination.
 
 ```
-tracert 8.8.8.8
+> tracert <targetname>
 ```
 
 ## Step 4
 
-Save the device configuration by copying the running-config to the startup-config
+Save the device configuration by copying the running-config to the startup-config.
 
 ```
-#write
+# write
 ```
 
-Turn off a router
+### PC's Physical GUI > Physical Device View
 
-- Physical tab > Power switch
+- Turn OFF the Power Switch.
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+### PC's Command Prompt
+
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 8.8.8.8
+> ping <targetname>
 ```
 
 Trace the path that an Internet Protocol (IP) packet takes to its destination.
 
 ```
-tracert 8.8.8.8
+> tracert <targetname>
 ```
 
 ## Step 5
 
-Save the device configuration by copying the running-config to the startup-config
+### PC's Physical GUI > Physical Device View
+
+- Turn ON the Power switch.
+
+### PC's Command Prompt
+
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-#write
-```
-
-Turn on a router
-
-- Physical tab > Power switch
-
-Send Internet Control Message Protocol (ICMP) echo Request messages
-
-```
-ping 8.8.8.8
+> ping <targetname>
 ```
 
 Trace the path that an Internet Protocol (IP) packet takes to its destination.
 
 ```
-tracert 8.8.8.8
+> tracert <targetname>
 ```
