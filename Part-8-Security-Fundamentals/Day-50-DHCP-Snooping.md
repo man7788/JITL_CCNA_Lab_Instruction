@@ -2,64 +2,64 @@
 
 # Step 1
 
-Specify a range of addresses that the device won't lease to DHCP clients
+Specify a range of addresses that the device won't lease to DHCP clients.
 
 ```
-(config)#ip dhcp excluded-address <low-ip> <high-ip>
+(config)# ip dhcp excluded-address <low-ip> <high-ip>
 ```
 
-Create/configure a DHCP pool
+Create/configure a DHCP pool.
 
 ```
-(config)#ip dhcp pool <name>
+(config)# ip dhcp pool <name>
 ```
 
-Set the range of IP addresses to lease to clients
+Set the range of IP addresses to lease to clients.
 
 ```
-(dhcp-config)#network <address> {</prefix-length | <netmask>}
+(dhcp-config)# network <address> {</prefix-length | <netmask>}
 ```
 
-Set the pool's default gateway
+Set the pool's default gateway.
 
 ```
-(dhcp-config)#default-router <ip-address>
+(dhcp-config)# default-router <ip-address>
 ```
 
 # Step 2
 
-Enable DHCP Snooping
+Enable DHCP Snooping.
 
 ```
-(config)#ip dhcp snooping
+(config)# ip dhcp snooping
 ```
 
-Activate DHCP Snooping VLANs
+Activate DHCP Snooping VLANs.
 
 ```
-(config)#ip dhcp snooping vlan <vlans>
+(config)# ip dhcp snooping vlan <vlans>
 ```
 
-Configure the port as a DHCP Snooping trusted port
+Configure the port as a DHCP Snooping trusted port.
 
 ```
-(config-if)#ip dhcp snooping trust
+(config-if)# ip dhcp snooping trust
 ```
 
 # Step 3
 
-## PC1
+### PC's Command Prompt
 
-Renew DHCP configuration for all adapters
+Renew DHCP configuration for all adapters.
 
 ```
-ipconfig /renew
+> ipconfig /renew
 ```
 
 # Step 4
 
-Disable option 82 insertion
+Disable option 82 insertion.
 
 ```
-(config)#no ip dhcp snooping information option
+(config)# no ip dhcp snooping information option
 ```

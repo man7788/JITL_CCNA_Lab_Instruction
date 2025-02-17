@@ -2,124 +2,127 @@
 
 # Step 1
 
-Enable aging, and set the aging time for secure MAC addresses learned on the port
+Enable aging, and set the aging time for secure MAC addresses learned on the port.
 
 ```
-(config-if)#switchport port-security aging time <minutes>
+(config-if)# switchport port-security aging time <minutes>
 ```
 
-Show interface switchport information
+Show interface switchport information.
 
 ```
-#show interfaces <interface-id> switchport
+# show interfaces <interface-id> switchport
 ```
 
-Manually configure access mode
+Manually configure access mode.
 
 ```
-(config-if)#switchport mode access
+(config-if)# switchport mode access
 ```
 
-Enable Port Security on the port
+Enable Port Security on the port.
 
 ```
-(config-if)#switchport port-security
+(config-if)# switchport port-security
 ```
 
-View Port Security settings for a port
+View Port Security settings for a port.
 
 ```
-#show port-security interface <interface>
+# show port-security interface <interface>
 ```
 
-Set the Port Security violation mode of the port
+Set the Port Security violation mode of the port.
 
 ```
-(config-if)#switchport port-security violation {shutdown | restrict | protect}
+(config-if)# switchport port-security violation {shutdown | restrict | protect}
 ```
 
-Limit the maximum number of MAC addresses that can be learned on the port
+Limit the maximum number of MAC addresses that can be learned on the port.
 
 ```
-(config-if)#switchport port-security maximum <number>
+(config-if)# switchport port-security maximum <number>
 ```
 
-Enable sticky secure MAC address learning
+Enable sticky secure MAC address learning.
 
 ```
-(config-if)#switchport port-security mac-address sticky
+(config-if)# switchport port-security mac-address sticky
 ```
 
-## PC1 - 3
+### PC's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.0.254
+> ping <targetname>
 ```
 
 ##
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
-View secure MAC addresses
+View secure MAC addresses.
 
 ```
-#show mac address-table secure
+# show mac address-table secure
 ```
 
-View a list of Port Security-enabled ports
+View a list of Port Security-enabled ports.
 
 ```
-#show port-security
+# show port-security
 ```
 
 # Step 2
 
-Configure a switch virtual interface (SVI)
+Configure a switch virtual interface (SVI).
 
 ```
-(config)#interface vlan <vlan-id>
+(config)# interface vlan <vlan-id>
 ```
 
-Set the interfaces's IP address/netmask
+Set the interfaces's IP address/netmask.
 
 ```
-(config-if)#ip address <ip-address> <netmask>
+(config-if)# ip address <ip-address> <netmask>
 ```
 
-Enable the interface
+Enable the interface.
 
 ```
-(config-if)#no shutdown
+(config-if)# no shutdown
 ```
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-#ping 10.0.0.254
+# ping <targetname>
 ```
 
-View Port Security settings for a port
+View Port Security settings for a port.
 
 ```
-#show port-security interface <interface>
+# show port-security interface <interface>
 ```
 
-## PC1
+##
 
-Change FastEthernet0's MAC address
+### PC's Config > INTERFACE > FastEthernet0
 
-- INTERFACE > FastEthernet0 > MAC Address: 0001.0001.000A
+- Change MAC address to 0001.0001.000A
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+
+### PC's Command Prompt
+
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping 10.0.0.254
+> ping <targetname>
 ```
 
 ##
