@@ -2,62 +2,58 @@
 
 # Step 1
 
-Configure a recursive static route
+Configure a recursive static route.
 
 ```
-(config)#ip route <destination-network> <netmask> <next-hop>
+(config)# ip route <destination-network> <netmask> <next-hop>
 ```
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-#ping 1.1.1.1
+# ping <targetname>
 ```
 
 # Step 2
 
-## PC
+### PC's Config GUI > GLOBAL > Settings
 
-Config all PC's Default Gateway
+#### Gateway/DNS IPv4 > Static
 
-- Gateway/DNS Static - 1.1.1.1
-
-##
+- Configure Default Gateway.
 
 # Step 3
 
-Configure the DNS server(s) to send DNS queries to
+Configure the DNS server(s) to send DNS queries to.
 
 ```
-(config)#ip name-server <ip-address>
+(config)# ip name-server <ip-address>
 ```
 
-Create a manual name-to-IP mapping
+Create a manual name-to-IP mapping.
 
 ```
-(config)#ip host <hostname> <ip-address>
+(config)# ip host <hostname> <ip-address>
 ```
 
-View all name-to-IP mappings
+View all name-to-IP mappings.
 
 ```
-#show hosts
+# show hosts
 ```
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages. 
 
 ```
-#ping PC1
+# ping <targetname>
 ```
 
 # Step 4
 
-## PC
+### PC's Command Prompt
 
-Send Internet Control Message Protocol (ICMP) echo Request messages
+Send Internet Control Message Protocol (ICMP) echo Request messages.
 
 ```
-ping youtube.com
+> ping <targetname>
 ```
-
-##

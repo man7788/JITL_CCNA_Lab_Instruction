@@ -2,80 +2,78 @@
 
 # Step 1
 
-Enable/disable the interface
+### PC's Desktop > Terminal
+
+Enable/disable the interface.
 
 ```
-(config-if)#[no] shutdown
+(config-if)# [no] shutdown
 ```
 
-View a concise summary of interface IP addresses and status
+View a concise summary of interface IP addresses and status.
 
 ```
-#show ip interface brief
+# show ip interface brief
 ```
 
-Timestamp log messages with the current date and time
+Timestamp log messages with the current date and time.
 
 ```
-(config-if)#service timestamps log datetime [locatime] [msec]
+(config-if)# service timestamps log datetime [locatime] [msec]
 ```
 
 # Step 2
 
-## PC
+### PC's Command Prompt
 
-Communicates with a computer running the telnet server service
+Communicates with a computer running the telnet server service. 
 
 ```
-telnet 192.168.1.1
+> telnet <targetname>
 ```
 
 ##
 
-Enable/disable the interface
+Enable/disable the interface.
 
 ```
-(config-if)#[no] shutdown
+(config-if)# [no] shutdown
 ```
 
-Enable real-time logging to the VTY lines for the current session
+Enable real-time logging to the VTY lines for the current session.
 
 ```
-#terminal monitor
+# terminal monitor
 ```
 
 # Step 3
 
-Show Syslog settings and the logging buffer
+Show Syslog settings and the logging buffer.
 
 ```
-#show logging
+# show logging
 ```
 
-Configure logging to the logging buffer
+Configure logging to the logging buffer.
 
 ```
-(config-if)#logging buffered [<bytes>] [<severity>]
+(config-if)# logging buffered [<bytes>] [<severity>]
 ```
 
 # Step 4
 
-Specify the Syslog server to send logs to
+Specify the Syslog server to send logs to.
 
 ```
-(config-if)#logging [host] <ip-address>
+(config-if)# logging [host] <ip-address>
 ```
 
-Configure logging to a Syslog server
+Configure logging to a Syslog server.
 
 ```
-(config-if)#logging trap [<severity>]
+(config-if)# logging trap [<severity>]
 ```
 
-## Server 1
+## SRV1 > Services > SYSLOG
 
-View Syslog server logging
-
-- SRV1 > Services > SYSLOG
-
-##
+- View Syslog server logging

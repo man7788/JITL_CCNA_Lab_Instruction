@@ -2,23 +2,21 @@
 
 # Step 1
 
-Configure a read-only community string
+Configure a read-only community string.
 
 ```
-(config)#snmp-server community <password> ro
+(config)# snmp-server community <password> ro
 ```
 
-Configure a read-write community string
+Configure a read-write community string.
 
 ```
-(config)#snmp-server community <password> rw
+(config)# snmp-server community <password> rw
 ```
 
 # Step 2
 
-## PC
-
-### Desktop > MIB Browser
+### PC's Desktop > MIB Browser
 
 - Address: 192.168.1.254
 - Advanced...
@@ -47,11 +45,11 @@ Configure a read-write community string
 
 4. #### What are those interfaces?
 
-- .interfaces > .ifTable > .ifDescr
+- .interfaces > .ifTable > .ifEntry > .ifDescr
 
 - Operations: Get
 
-- .interfaces > .ifTable > .ifType
+- .interfaces > .ifTable > .ifEntry > .ifType
 
 - Operations: Get
 
@@ -59,9 +57,7 @@ Configure a read-write community string
 
 # Step 3
 
-## PC
-
-### Desktop > MIB Browser
+### PC's Desktop > MIB Browser
 
 - .system > .sysName
 
@@ -73,8 +69,8 @@ Configure a read-write community string
 
 ##
 
-Show running-config, limit output to hostname
+View the running-config, limit output to hostname.
 
 ```
-#show running-config | include hostname
+# show running-config | include hostname
 ```
