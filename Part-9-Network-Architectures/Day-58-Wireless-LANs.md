@@ -1,35 +1,30 @@
-# Day 58 Lab - Wireless Configuration
+# Day 58 Lab - Wireless LANs
 
-Show running-config
+View the running-config.
 
 ```
-#show running-config
+# show running-config
 ```
 
 # Step 1
 
-## PC1
+### PC's Desktop > Web Browser
 
-Access GUI of WLC1
+#### Access GUI of WLC1
+- URL: https://172.16.1.10
 
-- Web Browser
-  - URL: https://172.16.1.10
-
-##
 
 # Step 2
 
-## WLC1 GUI
+### WLC1's GUI
 
 View AP Join Statistics
 
 - Monitor > Statistics > AP Join
 
-##
-
 # Step 3
 
-## WLC1 GUI
+## WLC1's GUI
 
 ### Create a dynamic interface for Internal WLAN
 
@@ -79,11 +74,10 @@ View AP Join Statistics
 
   - Primary DHCP Server: 10.1.0.1
 
-##
 
 # Step 4
 
-## WLC1 GUI
+## WLC1's GUI
 
 ### Create the Internal WLAN using WPA-2 + PSK
 
@@ -141,7 +135,6 @@ View AP Join Statistics
   - PSK Format: ASCII
     - Cisco123
 
-##
 
 # Step 5
 
